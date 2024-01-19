@@ -1,4 +1,4 @@
-PROJECT TITLE: NOTE
+PROJECT TITLE: JOURNAL
 
 TABLE OF CONTENT
 -[LICENSE](#LICENSE)
@@ -14,8 +14,9 @@ TABLE OF CONTENT
 MIT License (2023, Ryan Messett). Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the "Software"), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions: The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
 
 # DESCRIPTION
-This is the code for a note-taker application. In this application the user has to sign up using their name, email, password and age; then, they have to login using their email and password. In case the email and password is not correct then the user will receive the message "Failed to login". Once the user has login, he will be presented with a calendar and there he can add different notes and save them to look at them after. 
-The user information is stored in the mySQL database, in our case, we use Laragon to administrate and check the data. Sensitive data such as passwords are stored as tokens. Also, Postman was used to check the functionality of the routes. 
+This is the code for a Journal application. In this application the user has to sign up using their name, email, password and age; then, they have to login using their email and password. In case the email and password is not correct then the user will receive the message "Failed to login". Once the user has login, he will be presented with a calendar and there he can add different notes and save them to look at them after. 
+The user information is stored in the mySQL database, in our case, we use Laragon to administrate and check the data. Sensitive data such as passwords are stored as tokens. 
+
 
 # INSTALLATION INFORMATION
   To install all the node dependecies enter npm i, then enter npm run dev and go to port 4040 in your browser.

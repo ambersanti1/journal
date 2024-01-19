@@ -1,5 +1,4 @@
 const env = require("dotenv").config();
-
 const express = require("express");
 const exphbs = require("express-handlebars");
 const hbs = exphbs.create({});
@@ -22,7 +21,7 @@ app.use(express.static(__dirname + "/public"));
 app.use(express.static(__dirname + "/controllers"));
 
 app.use(require("./controllers/articles"));
-app.use(express.static(path.join(__dirname, "./public/images")));
+
 //Rutas
 app.get("/", (req, res) => {
   res.sendFile(path.join(__dirname, "./pages/login.html"));
@@ -81,7 +80,7 @@ app.delete("/api/notes/:id", (req, res) => {
 });
 
 //Server
-const port = process.env.PORT || 3001;
+const port = process.env.PORT || 4040;
 app.listen(port, () => {
   console.log("Tu app está lista por http://localhost:4040");
 });
