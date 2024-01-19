@@ -5,10 +5,22 @@ const host = process.env.MYSQL_HOST;
 
 const { Sequelize } = require("sequelize");
 
-const sequelize = new Sequelize(database, username, password, {
-  host,
-  dialect: "mysql",
+let sequelize;
+
+if(process.env.JAWSDB_URL) {
+  sequelize = new Sequelize(process.env.JAWSDB_URL)
+} else {
+  sequelize = new Sequelize(
+    database, 
+    username, 
+    password, 
+    {
+    host,
+    dialect: "mysql",
+    port: 3306,
+    
 });
+}
 
 const dbConnectMysql = async () => {
   try {
