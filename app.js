@@ -10,8 +10,7 @@ const cors = require("cors");
 const notesList = require("./db/db.json");
 const { validatorRegister, validatorLogin } = require("./validators/auth");
 const { loginCtrl, registerCtrl } = require("./controllers/auth");
-const { dbConnectMysql } = require("./config/mysql");
-
+const { dbConnectMysql } = require("./config/connection");
 
 //Configuración
 app.engine("handlebars", hbs.engine);
@@ -29,13 +28,11 @@ app.get("/", (req, res) => {
   res.sendFile(path.join(__dirname, "./pages/login.html"));
 });
 
-app.get("/notes",(req, res) => {
+app.get("/notes", (req, res) => {
   res.sendFile(path.join(__dirname, "./pages/todolist.html"));
-}
-);
+});
 app.post("/api/auth/register", validatorRegister, registerCtrl);
 app.post("/api/auth/login", validatorLogin, loginCtrl);
-
 
 //GET to consult notes
 app.get("/api/notes", (req, res) => {
@@ -82,7 +79,6 @@ app.delete("/api/notes/:id", (req, res) => {
   deleteNote(req.params.id, notesList);
   res.json(true);
 });
-
 
 //Server
 const port = process.env.PORT || 4040;
