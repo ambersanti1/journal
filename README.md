@@ -20,7 +20,7 @@ In the application there is a section where you can read articles about recommen
 
 
 # INSTALLATION INFORMATION
-  To install all the node dependecies enter npm i, then enter npm start and go to port 4040 in your browser.
+  To install all the node dependecies enter npm i, then enter npm run dev and go to port 4040 in your browser.
 
 # USAGE INFORMATION
   Create an account with your name, email, password and age; fill in the login section and use the calendar to create, save and delete notes.
