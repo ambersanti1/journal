@@ -14,11 +14,14 @@ formSignUp.addEventListener("submit", (event) => {
   const signUpJson = JSON.stringify(users);
   console.log(signUpJson);
   console.log(typeof password);
-  fetch("http://localhost:4040/api/auth/register", {
-    method: "POST",
-    heders: { "Content-Type": "application/json" },
-    body: signUpJson,
-  });
+  fetch(
+    "https://journal-project-b13e2781a0cd.herokuapp.com/api/auth/register",
+    {
+      method: "POST",
+      heders: { "Content-Type": "application/json" },
+      body: signUpJson,
+    }
+  );
   legend.classList.remove("hidden");
   saveSignUp.classList.add("hidden");
 });

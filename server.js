@@ -82,7 +82,9 @@ app.delete("/api/notes/:id", (req, res) => {
 //Server
 const port = process.env.PORT || 4040;
 app.listen(port, () => {
-  console.log("Tu app está lista por http://localhost:4040");
+  console.log(
+    "Tu app está lista por https://journal-project-b13e2781a0cd.herokuapp.com/"
+  );
 });
 
 dbConnectMysql();
